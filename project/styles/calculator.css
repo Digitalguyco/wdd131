@@ -1,14 +1,16 @@
-
-
-body, h1, p {
+* {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif,serif, Georgia;
 }
 
+
+
+
 body {
-    font-family:  Arial,sans-serif, serif, Georgia;
+    background-color: #F5F5f5f5;
     line-height: 1.6;
-    background-color: #F5F5F5F5;
+
 }
 header nav a.active {
     border-bottom: 2px solid white;
@@ -53,63 +55,88 @@ header nav a:hover {
     font-size: 30px;
     cursor: pointer;
 }
-
-
 .logo {
     max-width: 100px;
     height: auto;
 }
 
-
 main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.calculator-container {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
     padding: 20px;
-    background-color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-main h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-family: "Arial";
+.section {
+    margin-bottom: 20px;
 }
 
-main p {
-    font-size: 15px;
+.gender-selection, .activity-selection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    font-size: 14px;
+}
+
+.input-group {
     margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    border: none;
     padding: 10px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
+button:hover {
+    background-color: #333;
 }
 
-.gallery-item {
+.result {
+    margin-top: 20px;
+    font-size: 16px;
     text-align: center;
 }
 
-.gallery-item img {
-    max-width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 2px 2px 20px var(--shadow-color);
-}
-
-.gallery-item p {
-    margin-top: 10px;
-    font-size: 15px;
-}
-
-.text {
-    text-align: justify;
-    margin-left: 20px;
-    padding: 10px;
-}
 
 footer {
     background-color: #6ba292;
@@ -154,7 +181,14 @@ footer p {
     font-size: 15px;
 }
 
+.social-media {
+    display: flex;
+    align-items: center;
+}
 
+.social-media a {
+    margin-left: 10px;
+}
 
 @media (max-width: 768px) {
  
@@ -216,22 +250,4 @@ footer p {
         margin: 0 5px;
     }
 
- 
-
-    .gallery-item img {
-        height: auto;
-        width: 100%; /* Ensure the images take full width in single column */
-    }
-
-    .gallery-item p {
-        font-size: 1rem;
-    }
-
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 1rem;
-    }
 }

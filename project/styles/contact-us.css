@@ -4,11 +4,22 @@ body, h1, p {
     margin: 0;
     padding: 0;
 }
+h1{
+    font-family: "Arial";
+}
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
 
+.logo {
+    max-width: 100px;
+    height: auto;
+}
 body {
     font-family:  Arial,sans-serif, serif, Georgia;
     line-height: 1.6;
-    background-color: #F5F5F5F5;
 }
 header nav a.active {
     border-bottom: 2px solid white;
@@ -55,60 +66,68 @@ header nav a:hover {
 }
 
 
-.logo {
-    max-width: 100px;
-    height: auto;
-}
-
-
 main {
     padding: 20px;
-    background-color: #f7f7f7;
+    height: 100vh;
     text-align: center;
 }
 
-main h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-    font-family: "Arial";
-}
-
-main p {
-    font-size: 15px;
-    margin-bottom: 15px;
-    padding: 10px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-items: center;
-}
-
-.gallery-item {
-    text-align: center;
-}
-
-.gallery-item img {
-    max-width: 100%;
-    height: 350px;
-    object-fit: cover;
-    display: block;
+form {
+    max-width: 600px;
     margin: 0 auto;
-    border-radius: 20px;
-    box-shadow: 2px 2px 20px var(--shadow-color);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-.gallery-item p {
+form label {
+    display: block;
     margin-top: 10px;
-    font-size: 15px;
+    font-family: "Texturina";
 }
 
-.text {
-    text-align: justify;
-    margin-left: 20px;
+form input, form textarea {
+    width: 100%;
     padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background: #AACCFF;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: "Texturina";
+}
+
+form button:hover {
+    background: #F7811F;
+    color: #fff;
+}
+
+.rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.rating-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rating input {
+    margin-top: 5px;
+    cursor: pointer;
 }
 
 footer {
@@ -155,14 +174,16 @@ footer p {
 }
 
 
-
+/* Media Query for Mobile View */
 @media (max-width: 768px) {
- 
+    
     .header-container {
         flex-direction: column;
         align-items: flex-start;
     }
-
+    .rating-label {
+        font-size: 14px; 
+    }
     header nav {
         flex-direction: column;
         display: none;
@@ -181,57 +202,19 @@ footer p {
 
     .hamburger-menu {
         display: block;
-        justify-content: end;
     }
 
     .footer-container {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
 
     footer nav {
         flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
+        align-items: center;
     }
 
     footer nav a {
         margin: 5px 0;
-        text-align: center;
-        width: 100%;
-    }
-
-    footer p {
-        width: 100%;
-        text-align: center;
-    }
-
-    .social-media {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .social-media a {
-        margin: 0 5px;
-    }
-
- 
-
-    .gallery-item img {
-        height: auto;
-        width: 100%; /* Ensure the images take full width in single column */
-    }
-
-    .gallery-item p {
-        font-size: 1rem;
-    }
-
-    main h1 {
-        font-size: 2rem;
-    }
-
-    main p {
-        font-size: 1rem;
     }
 }

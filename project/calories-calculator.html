@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living Hub - Calories Calculator</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Daniel Ikekwem,  Healthy Living Hub">
+    <meta name="author" content="Daniel Ikekwem">
+    <link rel="stylesheet" href="styles/calculator.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wellness-tip.html" >Wellness Tips</a>
+                <a href="calories-calculator.html" class="active">Calculate Your Calories</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+    <main>
+    <div class="calculator-container">
+        <h2>Learn How Many Calories You Burn Daily</h2>
+        <form id="calorie-form">
+            <div class="section">
+                <h3>About You</h3>
+                <div class="gender-selection">
+                    <label>
+                        <input type="radio" name="gender" value="male" checked> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                </div>
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" min="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="height">Height (cm)</label>
+                    <input type="number" id="height" min="0" required>
+                </div>
+                <div class="input-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" min="0" required>
+                </div>
+            </div>
+            <div class="section">
+                <h3>How Active Are You?</h3>
+                <div class="activity-selection">
+                    <label>
+                        <input type="radio" name="activity" value="sedentary" checked> Sedentary
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="light"> Light Activity
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="moderate"> Moderate Activity
+                    </label>
+                    <label>
+                        <input type="radio" name="activity" value="very"> Very Active
+                    </label>
+                </div>
+            </div>
+            <button type="button" id="calculate-btn">Calculate</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+</main>
+    <script src="scripts/calculator.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="wellness-tip.html">Wellness Tips</a>
+                <a href="calories-calculator.html">Calculate Your Calories</a>
+                <a href="contact-us.html">Contact Us</a>
+            </nav>
+            <p>
+                &copy; <span id="currentyear"></span> 🦖 Ikekwem, Daniel 🦖 Nigeria
+            </p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+</body>
+</html>
