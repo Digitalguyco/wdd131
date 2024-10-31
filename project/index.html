@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthy Living Hub</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Daniel Ikekwem Healthy Living Hub">
+    <meta name="author" content="Daniel Ikekwem">
+    <link rel="stylesheet" href="styles/home.css">
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a id="logo_link" href="index.html">
+                <img class="logo" src="images/logo.png" alt="Kolie's Home Electricals logo">
+            </a>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <!-- <a href="safety-first.html">Safety First</a>
+                <a href="wiring-basics.html">Wiring Basics & Regular Maintenance</a>
+                <a href="contact-us.html">Contact Us</a> -->
+            </nav>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                &#9776;
+            </button>
+        </div>
+    </header>
+    <main>
+        <h1>Healthy Living Hub</h1>
+        <h2>"Healthy Living Hub" is a mini-resource center for <br/> people looking to lead a healthier lifestyle.</h2>
+        <p>Daily Meal Plan - meal for date: <span id="currentDate">{}</span></p>
+        <section id="dailyMeal" class="gallery"></section>
+        <p>Daily exercise routines  - Excercise Routine for date: <span id="currentDate2">{}</span></p>
+        <section id="dailyExcercise" class="gallery"></section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear"></span> 🦖 Ikekwem, Daniel 🦖 Nigeria
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+</html>
